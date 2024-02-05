@@ -2,6 +2,7 @@ package org.example;
 
 
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -15,9 +16,9 @@ public class Main {
         Scanner leerDato= new Scanner(System.in);
 
         System.out.println("*****BIENVENIDO A MODA EXPRESS! TU TIENDA FAVORITA*****");
-        System.out.println("Por favor ingresa tu npmbre completo: ");
+        System.out.println("Por favor ingresa tu nombre completo: ");
         nombreCompleto = leerDato.nextLine();
-        System.out.println("Ingrese el tipo de cliiente (REGULAR O VIP)");
+        System.out.println("Ingrese el tipo de cliiente (Regular O Vip)");
         tipoCliente=leerDato.nextLine();
         System.out.println("Ingrese cantidad de articulos comprados: ");
         cantidadArticulos= leerDato.nextInt();
@@ -25,7 +26,7 @@ public class Main {
         valorTotalCompraSinDescuento=leerDato.nextDouble();
 
 
-        if (tipoCliente.equals("Regular")){
+        if (tipoCliente.toUpperCase().equals("Regular")){
             if(cantidadArticulos >=1 && cantidadArticulos<=3){
                 descuento= 0.05;
 
@@ -37,7 +38,7 @@ public class Main {
 
             }
 
-        } else if (tipoCliente.equals("VIP")){
+        } else if (tipoCliente.toUpperCase().equals("VIP")){
             if (cantidadArticulos >= 1 && cantidadArticulos<=3){
                 descuento= 0.10;
 
